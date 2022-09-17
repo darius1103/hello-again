@@ -1,0 +1,18 @@
+<div class="content" role="main">
+  <div class="canvas-container" style="width: 500px; height: 500px">
+    <canvas id="canvas" (click)="fillPixel($event)" #canvas style="width: 500px; height: 500px"></canvas>
+  </div>
+  <div>
+    <canvas id="colorPicker" (click)="colorPicked($event)" #colorPicker style="width: 100px; height: 100px"></canvas>
+  </div>
+  <div>
+    <p>Controls</p>
+    <input style="width: 500px;" (keyup)="colorsChanged($event)" [value]="colors">
+  </div>
+
+  <div>
+    <p>Encoding</p>
+    <textarea style="width: 500px; height: 200px;" [value]="encoding">
+    </textarea>
+  </div>
+</div>
